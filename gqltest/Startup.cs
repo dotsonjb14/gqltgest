@@ -40,6 +40,7 @@ namespace gqltest
             services.AddSingleton<DudeType>();
             services.AddSingleton<InputDudeType>();
             services.AddSingleton<Dude>();
+
             services.AddGraphQL().AddUserContextBuilder(httpContext => new GraphQLUserContext {
                 id = httpContext.Request.Headers["id"]
             });
